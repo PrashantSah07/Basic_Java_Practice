@@ -66,6 +66,6 @@ class Inheritance {
 
     Derived d = new Derived();
     d.dog();
-    d.cat();
+    d.cat(); 
   }
 }
