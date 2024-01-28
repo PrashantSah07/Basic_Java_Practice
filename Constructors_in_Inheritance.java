@@ -52,35 +52,71 @@
 
 
 
-import java.util.Scanner; 
-class base{  
-    int x;
-    base(int a){ 
-        System.out.println("I am a base class constructor: "+a); 
-        x=a; 
-    }
-        void hh(){
-        System.out.println(x);
-        }
+// import java.util.Scanner; 
+// class base{  
+//     int x;
+//     base(int a){ 
+//         System.out.println("I am a base class constructor: "+a); 
+//         x=a; 
+//     }
+//         void hh(){
+//         System.out.println(x);
+//         }
     
-} 
-class base1 extends base{  
-    base1(int b){ 
-        super(b);
-        System.out.println("I am a base1 class constructor: "+b);
-    }
+// } 
+// class base1 extends base{  
+//     base1(int b){ 
+//         super(b);
+//         System.out.println("I am a base1 class constructor: "+b);
+//     }
     
+// }
+// public class Constructors_in_Inheritance { 
+    
+//     public static void main(String[] args){
+//         base b=new base(5);
+//         b.hh();
+//         base1 b1=new base1(34);
+//         b1.hh();
+        
+     
+//     }
+// } 
+
+
+
+                                        /// USING (THIS) KEYWORD IN THE PROGRAM ///
+
+class Ekclass {
+
+  public int a;
+
+  Ekclass(int a) { 
+    //a=a;
+    this.a = a;
+  }
+
+  int getA() {
+    return a;
+  }
 }
-public class Constructors_in_Inheritance { 
-    
-    public static void main(String[] args){
-        base b=new base(5);
-        b.hh();
-        base1 b1=new base1(34);
-        b1.hh();
-        
-        
-        
-        
-    }
+
+class Doclass extends Ekclass {
+
+  Doclass(int v) {
+    super(v);
+    System.out.println("I am a Constructors");
+  }
 }
+
+public class Constructors_in_Inheritance {
+
+  public static void main(String[] args) {
+    Ekclass ec = new Ekclass(5);
+    System.out.println(ec.getA());
+
+    Doclass d = new Doclass(65);
+    System.out.println(d.getA());
+  }
+}
+
