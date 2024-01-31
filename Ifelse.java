@@ -65,7 +65,8 @@ import java.util.Scanner;
         } else 
             System.out.println("Sorry You'r fail:(");
           
-    
+       // Close the Scanner
+       sc.close();
     
 }}
 

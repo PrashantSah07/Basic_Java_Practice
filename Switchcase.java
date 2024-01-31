@@ -76,5 +76,7 @@ class Switchcase{
 
             System.out.println("Thank You:)");
  
+            // Close the Scanner
+            sc.close();
     }
 }
