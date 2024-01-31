@@ -97,8 +97,5 @@ class Loops{
     System.out.print(ch+" "); 
     }  
     System.out.println("\nStopp");
-
-    // Close the Scanner
-    sc.close();
   
   }}
