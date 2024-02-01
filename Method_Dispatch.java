@@ -31,7 +31,7 @@ class Method_Dispatch {
     // spn.music();
     // spn.on();
 
-      Phone pn = new SmartPhone(); //---> This is valid
+      Phone pn = new SmartPhone();  //---> This is valid
       //  SmartPhone smp=new Phone();  //---> This is not valid
 
       pn.greet();
