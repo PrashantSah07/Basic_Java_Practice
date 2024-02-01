@@ -36,7 +36,7 @@ class Method_Dispatch {
 
       pn.greet();
       pn.on();
-      // pn.swagat();   //---> Not Allowed
+      // pn.music();   //---> Not Allowed
 
   }
 }
