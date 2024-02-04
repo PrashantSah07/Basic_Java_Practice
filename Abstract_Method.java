@@ -1,14 +1,14 @@
-// abstract class phone{ 
+// abstract class Speaker{ 
 //     void turnOn(){ 
-//         System.out.println("Turning on the phone...");
+//         System.out.println("Turning on the Speaker...");
 //     } 
 //     void turnOff(){ 
-//         System.out.println("Turning off the phone...");
+//         System.out.println("Turning off the Speaker...");
 //     } 
 
 //    abstract void music();
 // } 
-// class phone2 extends phone{  
+// class Speaker2 extends Speaker{  
 //     @Override   
 //     void music(){ 
 //         System.out.println("Turning on the music...");
@@ -17,15 +17,15 @@
 // }
 // public class Abstract_Method{ 
 //     public static void main(String[] args) { 
-//         // phone ph= new phone();                        //--> No object can be created of an abstract class,and also not can be access their method.
-//         // ph.turnOn(); 
-//         // ph.turnOff(); 
+//         // Speaker sp= new Speaker();                        //--> No object can be created of an abstract class,and also not can be access their method.
+//         // sp.turnOn(); 
+//         // sp.turnOff(); 
 
-//         phone2 ph2= new phone2();                        /*--> if some child class extends abstract parents class must be copied thier abstract mathod of parents class.
+//         Speaker2 sp2= new Speaker2();                        /*--> if some child class extends abstract parents class must be copied thier abstract mathod of parents class.
 //         //                                                         Otherwise child class cannot create its own object aswell*/
-//         ph2.music();
-//         ph2.turnOn(); 
-//         ph2.turnOff();
+//         sp2.music();
+//         sp2.turnOn(); 
+//         sp2.turnOff();
          
 //     }
 // }
