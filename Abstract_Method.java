@@ -89,8 +89,8 @@ class Child3 extends Child2 {
 public class Abstract_Method {
 
   public static void main(String[] args) {
-    // Parents p=new Parents();                  //--> No object can be created of an abstract class,and also not can be access their method.
-    //  p.sayHello();
+    //Parents p=new Parents();                  //--> No object can be created of an abstract class,and also not can be access their method.
+    //p.sayHello();
     Child c = new Child();                       /*--> if some child class extends abstract parents class must be copied thier abstract mathod of parents class.
                                                         Otherwise child class cannot create its own object aswell*/
     c.greet();
