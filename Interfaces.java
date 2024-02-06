@@ -35,48 +35,105 @@
 
 
 
-interface Home {
-  void sleeping();
-  void eating();
+
+// interface Home {
+//   void sleeping();
+//   void eating();
+// }
+
+// interface Home2 {
+//   void dancing();
+//   void watching();
+// }
+
+// class Ghar implements Home, Home2 {
+
+//   void benefits() {
+//     System.out.println("Using interfaces we can implements one or more interface classes in one child class.");
+//   }
+
+//   public void sleeping() {
+//     System.out.println("I am sleeping");
+//   }
+
+//   public void eating() {
+//     System.out.println("I am eating");
+//   }
+
+//   public void dancing() {
+//     System.out.println("I am dancing");
+//   }
+
+//   public void watching() {
+//     System.out.println("I am watching movie");
+//   }
+// }
+
+// public class Interfaces {
+
+//   public static void main(String[] args) {
+//     Ghar gh = new Ghar();
+//     gh.benefits();
+
+//     gh.sleeping();
+//     gh.eating();
+//     gh.dancing();
+//     gh.watching();
+//   }
+// }
+
+
+
+
+
+class Tv { 
+  void showCinema() {
+    System.out.println("I am watching cinema");
+  }
 }
 
-interface Home2 {
-  void dancing();
-  void watching();
+interface check1 {
+  void gps();
 }
 
-class Ghar implements Home, Home2 {
+interface check2 {
+  void camera();
+}
 
-  void benefits() {
-    System.out.println("Using interfaces we can implements one or more interface classes in one child class.");
+interface check3 {
+  void mediaPlayer();
+}
+
+class computer extends Tv implements check1, check2, check3 {
+
+  void code() {
+    System.out.println("I am learning coding using computer");
   }
 
-  public void sleeping() {
-    System.out.println("I am sleeping");
+  public void gps() {
+    System.out.println("i am using gps");
   }
 
-  public void eating() {
-    System.out.println("I am eating");
+  public void camera() {
+    System.out.println("i am a photographer");
   }
 
-  public void dancing() {
-    System.out.println("I am dancing");
-  }
-
-  public void watching() {
-    System.out.println("I am watching movie");
+  public void mediaPlayer() {
+    System.out.println("i am listening the mediaPlayer");
   }
 }
 
 public class Interfaces {
 
   public static void main(String[] args) {
-    Ghar gh = new Ghar();
-    gh.benefits();
+    Tv t = new Tv();
+    t.showCinema();
+    computer cm = new computer();
 
-    gh.sleeping();
-    gh.eating();
-    gh.dancing();
-    gh.watching();
+    cm.code();
+    cm.showCinema();
+    cm.gps();
+    cm.camera();
+    cm.mediaPlayer();
   }
 }
