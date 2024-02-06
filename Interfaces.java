@@ -134,6 +134,7 @@ public class Interfaces {
     cm.showCinema();
     cm.gps();
     cm.camera();
-    cm.mediaPlayer();
+    cm.mediaPlayer(); 
+    
   }
 }
