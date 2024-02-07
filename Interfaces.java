@@ -157,7 +157,10 @@ class MyCellPhone {
 
 interface MyCamera {
   void takeSnap();
-  void recordVideo();
+  void recordVideo(); 
+  default void record4kVideo(){ 
+    System.out.println("Recording in 4k...");
+  }
 }
 
 interface MyWifi {
@@ -165,7 +168,7 @@ interface MyWifi {
   void connectToNetwork(String network);
 }
 
-class MySmartPhone extends MyCellPhone implements MyCamera, MyWifi {
+class MySmartPhone extends MyCellPhone implements MyCamera, MyWifi { 
 
   public void takeSnap() {
     System.out.println("Taking snap");
@@ -198,13 +201,14 @@ public class Interfaces {
     msp.pickCall();
 
     msp.takeSnap();
-    msp.recordVideo();
+    msp.recordVideo(); 
+    msp.record4kVideo();
 
     String[] str = msp.getNetwork();
     for (int a = 0; a < str.length; a++) {
       System.out.println(str[a]);
     }
-    msp.connectToNetwork("Airtel 5G"); 
+    msp.connectToNetwork("Airtel 5G");   
 
   }
 }
