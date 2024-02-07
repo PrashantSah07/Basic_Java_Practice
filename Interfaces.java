@@ -36,6 +36,7 @@
 
 
 
+
 // interface Home {
 //   void sleeping();
 //   void eating();
@@ -86,55 +87,124 @@
 
 
 
-class Tv { 
-  void showCinema() {
-    System.out.println("I am watching cinema");
+// class Tv {
+//   void showCinema() {
+//     System.out.println("I am watching cinema");
+//   }
+// }
+
+// interface check1 {
+//   void gps();
+// }
+
+// interface check2 {
+//   void camera();
+// }
+
+// interface check3 {
+//   void mediaPlayer();
+// }
+
+// class computer extends Tv implements check1, check2, check3 {
+
+//   void code() {
+//     System.out.println("I am learning coding using computer");
+//   }
+
+//   public void gps() {
+//     System.out.println("i am using gps");
+//   }
+
+//   public void camera() {
+//     System.out.println("i am a photographer");
+//   }
+
+//   public void mediaPlayer() {
+//     System.out.println("i am listening the mediaPlayer");
+//   }
+// }
+
+// public class Interfaces {
+
+//   public static void main(String[] args) {
+//     Tv t = new Tv();
+//     t.showCinema();
+//     computer cm = new computer();
+
+//     cm.code();
+//     cm.showCinema();
+//     cm.gps();
+//     cm.camera();
+//     cm.mediaPlayer();
+
+//   }
+// }
+
+
+
+
+
+class MyCellPhone {
+
+  void callNumber(long phoneNumber) {
+    System.out.println("Calling " + phoneNumber);
+  }
+
+  void pickCall() {
+    System.out.println("Connecting...");
   }
 }
 
-interface check1 {
-  void gps();
+interface MyCamera {
+  void takeSnap();
+  void recordVideo();
 }
 
-interface check2 {
-  void camera();
+interface MyWifi {
+  String[] getNetwork();
+  void connectToNetwork(String network);
 }
 
-interface check3 {
-  void mediaPlayer();
-}
+class MySmartPhone extends MyCellPhone implements MyCamera, MyWifi {
 
-class computer extends Tv implements check1, check2, check3 {
-
-  void code() {
-    System.out.println("I am learning coding using computer");
+  public void takeSnap() {
+    System.out.println("Taking snap");
   }
 
-  public void gps() {
-    System.out.println("i am using gps");
+  public void recordVideo() {
+    System.out.println("Recording video");
   }
 
-  public void camera() {
-    System.out.println("i am a photographer");
+  public String[] getNetwork() {
+    System.out.println("Getting list of network");
+    String[] str1 = { "Harry", "Prashant", "Anjali5G" };
+    return str1;
   }
 
-  public void mediaPlayer() {
-    System.out.println("i am listening the mediaPlayer");
+  public void connectToNetwork(String network) {
+    System.out.println("Connecting to " + network);
   }
 }
 
 public class Interfaces {
 
-  public static void main(String[] args) {
-    Tv t = new Tv();
-    t.showCinema();
-    computer cm = new computer();
-
-    cm.code();
-    cm.showCinema();
-    cm.gps();
-    cm.camera();
-    cm.mediaPlayer(); 
+  public static void main(String[] args) { 
+    MyCellPhone mcp=new MyCellPhone(); 
+    mcp.callNumber(100); 
+    mcp.pickCall(); 
     
+    MySmartPhone msp = new MySmartPhone();
+    msp.callNumber(9693217150l);
+    msp.pickCall();
+
+    msp.takeSnap();
+    msp.recordVideo();
+
+    String[] str = msp.getNetwork();
+    for (int a = 0; a < str.length; a++) {
+      System.out.println(str[a]);
+    }
+    msp.connectToNetwork("Airtel 5G"); 
+
   }
 }
