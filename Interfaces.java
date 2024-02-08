@@ -206,12 +206,12 @@ interface Sample {
   void meth2();
 }
 
-interface childSample extends Sample {
+interface ChildSample extends Sample {
   void meth3();
   void meth4();
 }
 
-class MySampleClass implements childSample {
+class MySampleClass implements ChildSample {
 
   void check() {
     System.out.println("Just for check");
@@ -237,7 +237,7 @@ class MySampleClass implements childSample {
 public class Interfaces {
 
   public static void main(String[] args) {
-    MySampleClass msc = new MySampleClass(); 
+    MySampleClass msc = new MySampleClass();
     msc.check();
 
     msc.meth1();
