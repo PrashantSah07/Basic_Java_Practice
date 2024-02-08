@@ -33,10 +33,6 @@
 //   }
 // }
 
-
-
-
-
 // interface Home {
 //   void sleeping();
 //   void eating();
@@ -82,10 +78,6 @@
 //     gh.watching();
 //   }
 // }
-
-
-
-
 
 // class Tv {
 //   void showCinema() {
@@ -140,75 +132,117 @@
 //   }
 // }
 
+// class MyCellPhone {
 
+//   void callNumber(long phoneNumber) {
+//     System.out.println("Calling " + phoneNumber);
+//   }
 
+//   void pickCall() {
+//     System.out.println("Connecting...");
+//   }
+// }
 
+// interface MyCamera {
+//   void takeSnap();
+//   void recordVideo();
+//   default void record4kVideo(){
+//     System.out.println("Recording in 4k...");
+//   }
+// }
 
-class MyCellPhone {
+// interface MyWifi {
+//   String[] getNetwork();
+//   void connectToNetwork(String network);
+// }
 
-  void callNumber(long phoneNumber) {
-    System.out.println("Calling " + phoneNumber);
-  }
+// class MySmartPhone extends MyCellPhone implements MyCamera, MyWifi {
 
-  void pickCall() {
-    System.out.println("Connecting...");
-  }
+//   public void takeSnap() {
+//     System.out.println("Taking snap");
+//   }
+
+//   public void recordVideo() {
+//     System.out.println("Recording video");
+//   }
+
+//   public String[] getNetwork() {
+//     System.out.println("Getting list of network");
+//     String[] str1 = { "Harry", "Prashant", "Anjali5G" };
+//     return str1;
+//   }
+
+//   public void connectToNetwork(String network) {
+//     System.out.println("Connecting to " + network);
+//   }
+// }
+
+// public class Interfaces {
+
+//   public static void main(String[] args) {
+//     MyCellPhone mcp=new MyCellPhone();
+//     mcp.callNumber(100);
+//     mcp.pickCall();
+
+//     MySmartPhone msp = new MySmartPhone();
+//     msp.callNumber(9693217150l);
+//     msp.pickCall();
+
+//     msp.takeSnap();
+//     msp.recordVideo();
+//     msp.record4kVideo();
+
+//     String[] str = msp.getNetwork();
+//     for (int a = 0; a < str.length; a++) {
+//       System.out.println(str[a]);
+//     }
+//     msp.connectToNetwork("Airtel 5G");
+
+//   }
+// }
+
+interface Sample {
+  void meth1();
+  void meth2();
 }
 
-interface MyCamera {
-  void takeSnap();
-  void recordVideo(); 
-  default void record4kVideo(){ 
-    System.out.println("Recording in 4k...");
-  }
+interface childSample extends Sample {
+  void meth3();
+  void meth4();
 }
 
-interface MyWifi {
-  String[] getNetwork();
-  void connectToNetwork(String network);
-}
+class MySampleClass implements childSample {
 
-class MySmartPhone extends MyCellPhone implements MyCamera, MyWifi { 
-
-  public void takeSnap() {
-    System.out.println("Taking snap");
+  void check() {
+    System.out.println("Just for check");
   }
 
-  public void recordVideo() {
-    System.out.println("Recording video");
+  public void meth1() {
+    System.out.println("Meth1");
   }
 
-  public String[] getNetwork() {
-    System.out.println("Getting list of network");
-    String[] str1 = { "Harry", "Prashant", "Anjali5G" };
-    return str1;
+  public void meth2() {
+    System.out.println("Meth2");
   }
 
-  public void connectToNetwork(String network) {
-    System.out.println("Connecting to " + network);
+  public void meth3() {
+    System.out.println("Meth3");
+  }
+
+  public void meth4() {
+    System.out.println("Meth4");
   }
 }
 
 public class Interfaces {
 
-  public static void main(String[] args) { 
-    MyCellPhone mcp=new MyCellPhone(); 
-    mcp.callNumber(100); 
-    mcp.pickCall(); 
-    
-    MySmartPhone msp = new MySmartPhone();
-    msp.callNumber(9693217150l);
-    msp.pickCall();
+  public static void main(String[] args) {
+    MySampleClass msc = new MySampleClass(); 
+    msc.check();
 
-    msp.takeSnap();
-    msp.recordVideo(); 
-    msp.record4kVideo();
-
-    String[] str = msp.getNetwork();
-    for (int a = 0; a < str.length; a++) {
-      System.out.println(str[a]);
-    }
-    msp.connectToNetwork("Airtel 5G");   
-
+    msc.meth1();
+    msc.meth2();
+    msc.meth3();
+    msc.meth4();
   }
 }
