@@ -68,7 +68,7 @@
 //     System.out.println(cc.a);
 //     System.out.println(cc.b);
 //     System.out.println(cc.c);
-//     //System.out.println(cc.d);             //---> in inheritance private access modifier also can'nt
+//     //System.out.println(cc.d);             //---> in inheritance private access modifier also can'nt be accessable
 
 //   }
 // }
@@ -89,7 +89,7 @@ class c1 {
           System.out.println(a); 
           System.out.println(b);
           System.out.println(c);
-          //System.out.println(d);            //---> in inheritance private access modifier also can'nt accessable
+          //System.out.println(d);            //---> in inheritance private access modifier also can'nt be accessable
         }
         
     }
