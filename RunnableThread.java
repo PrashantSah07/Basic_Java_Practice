@@ -28,6 +28,5 @@ public class RunnableThread {
 
     gun1.start();
     gun2.start(); 
-    
   }
 }
