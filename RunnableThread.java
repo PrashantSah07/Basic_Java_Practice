@@ -1,7 +1,7 @@
 class MyRunnableThread1 implements Runnable {
 
   public void run() {
-    for (int a = 0; a <= 10; a++) {
+    for (int a = 0; a <= 400; a++) {
       System.out.println("I am thread 1"); 
     }
   }
@@ -10,7 +10,7 @@ class MyRunnableThread1 implements Runnable {
 class MyRunnableThread2 implements Runnable {
 
   public void run() {
-    for (int a = 0; a <= 10; a++) {
+    for (int a = 0; a <= 400; a++) {
       System.out.println("I am thread 2");
     }
   }
