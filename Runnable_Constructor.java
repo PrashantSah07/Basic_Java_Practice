@@ -27,5 +27,6 @@ class Mythr1 implements Runnable {
       System.out.println(t2.getId());
       System.out.println(t2.getName()); 
       
-    }
+      
+    } 
   }
